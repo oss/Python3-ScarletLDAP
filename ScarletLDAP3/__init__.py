@@ -11,7 +11,7 @@ class ScarletLDAP:
         self.user_srv  = user_srv
         self.admin_srv = admin_srv
 
-    def authenticate(self, netid, passwd, use_enigma):
+    def authenticate(self, netid, passwd, use_enigma=False):
         
         # establish initial connection to ldap server and bind anonymously
         conn = Connection(self.server, user=netid, auto_bind=True)
